@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+html,body{
+    width:100%;
+}
+html{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-primary-color);
+    color:var(--text-primary-color);
+}
+main{
+    width: 100%;
+   
+}
+main section{
+    width: 100%;
+    padding: var(--padding-2xl);
+    display: flex;
+    gap:var(--gutter-lg);
+}
+
+.btn{
+    padding:var(--padding-sm) var(--padding-lg);
+    border:none;
+    border-radius: var(--border-radius-md);
+    outline:none;
+    background-color: var(--bg-active-color);
+    cursor:pointer;
+    color: var(--text-active-color);
+
+}
+
+
+
+main section .top{
+    display:flex;
+    align-items:center;
+    gap:var(--gutter-md);
+    
+    
+
+}
+#reset_btn{
+    background-color:var(--bg-danger-color);
+    color:var(--text-primary-color);
+}
+
+
+#download_btn{
+    background-color:var(--bg-normal-color);
+    color:var(--text-primary-color);
+}
+
+main section .left{
+    display: flex;
+    flex-direction: column;
+    gap:var(--gutter-lg);
+    width: 70%;
+
+}
+
+
+main section .bottom{
+    background-color: rgb(44, 22, 22);
+    width: 100%;
+    padding:var(--padding-2xl);
+    aspect-ratio: 4/3;
+    border-radius: var(--border-radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main section .bottom .placeholder_img i{
+    font-size: 10rem;
+}
+main section .bottom .placeholder_img p{
+    font-size: var(--font-size-lg);
+}
+
+main section .right{
+    width: 30%;
+    padding: var(--padding-lg);
+    background-color: var(--bg-secondary-color);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    flex-direction: column;
+    gap:var(--gutter-md)
+   /*  align-items: center;*/
+}
+main section .right .filters{
+    width: 100%;
+   flex-direction: column;
+   gap:var(--gutter-md);
+    
+    
+    
+}
+
+main section .right .filters input{
+    width: 100%;
+    outline: none;
+    margin-top:var(--margin-sm);
+    appearance: none;
+}
+
+main section .right .filters input::-webkit-slider-runnable-track{
+    background-color: var(--bg-active-color);
+    background-color: rgb(33, 48, 48);
+    border:1.2px solid rgb(10, 32, 10) ;
+   
+    height: 2px;
+}
+
+
+main section .right .filters input::-webkit-slider-thumb{
+    cursor: pointer;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(63, 20, 20);
+    border-radius: 50%;
+    border:2px solid rgb(18, 34, 18);
+    margin-top: -8.5px;
+}
+
+canvas{
+    
+    max-width: 80%;
+    max-height:90% ;
+}
+
+
+.presets{
+    display: flex;
+    flex-wrap:wrap;
+    gap:var(--gutter-md);
+    
+
+}
+/*
+.presets button{
+    flex:1 1 45%;
+    background-color:var(--bg-danger-color);
+    color:var(--text-primary-color);
+    border:1.1px solid var(--bg-normal-color);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 0 0.5px white;
+}
+*/
+.presets button{
+    background-color: rgb(107, 73, 73);
+    color: rgb(236, 234, 234);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    /* shadow */
+    box-shadow: 0 4px 10px rgba(233, 233, 233, 0.15);
+
+    /* smooth animation */
+    transition: all 0.3s ease;
+}
+
+/* hover effect */
+.presets button:hover{
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
