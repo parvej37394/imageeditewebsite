@@ -145,13 +145,15 @@ resetbtn.addEventListener("click", () => {
 
 downloadbtn.addEventListener("click", () => {
 
+    const quality = qualityInput.value;
+
     const link = document.createElement("a");
 
     // file name
     link.download = "edited-image.png";
 
     // canvas image
-    link.href = imageCanvas.toDataURL();
+    link.href = imageCanvas.toDataURL( "imge/jpg" , qualityInput.value / 100);
 
     // auto click
     link.click();
@@ -312,5 +314,25 @@ Object.keys(presets).forEach((presetName) => {
         filterContainer.innerHTML = "";
 
     });
+
+});
+
+
+const widthInput = document.getElementById("img_width");
+const heightInput = document.getElementById("img_height");
+const qualityInput = document.getElementById("img_quality");
+const resizeBtn = document.getElementById("apply_resize");
+
+resizeBtn.addEventListener("click", () => {
+
+    if(!image) return;
+
+    const width = widthInput.value || image.width;
+    const height = heightInput.value || image.height;
+
+    canvas.width = width;
+    canvas.height = height;
+
+    applyfilters();
 
 });
